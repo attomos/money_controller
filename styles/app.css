@@ -1,0 +1,35 @@
+label {
+  cursor: pointer;
+}
+
+body {
+  margin: 10px;
+}
+
+.unstyled {
+  list-style-type: none;
+  display: table-row;
+}
+
+.money {
+  background: lightgreen;
+}
+
+.day {
+  margin: 5px 0;
+  padding: 5px;
+  display: block;
+}
+
+.weekday {
+  background: #E3D2E3;
+}
+
+.weekend {
+  background: #FED6D7;
+}
+
+.ignore {
+  background: #F5F5F5;
+  text-decoration: line-through;
+}
