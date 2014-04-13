@@ -11,8 +11,19 @@ body {
   display: table-row;
 }
 
+.unstyled li {
+  width: 350px;
+}
+
+.money::before {
+  content: "THB ";
+}
+
 .money {
-  background: lightgreen;
+  background: #9CFF8A;
+  margin: -5px -5px;
+  padding: 5.5px;
+  float: right;
 }
 
 .day {
