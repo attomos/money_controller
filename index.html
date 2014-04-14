@@ -4,35 +4,47 @@
     <title></title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/money_controller.css" type="text/css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="css/uikit.css" type="text/css" media="screen" charset="utf-8">
-    <script src="js/angular.min.js"></script>
-    <script src="js/moment-with-langs.min.js"></script>
-    <script src="js/uikit.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" media="screen" charset="utf-8">
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/moment/min/moment-with-langs.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body>
     <div ng-controller="MoneyCtrl">
-      <div class="container">
-        <p>
-          You got THB <input ng-model="money" type="text" placeholder="999" autofocus> until end of this month.
-        </p>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center content">
+            <p class="lead">
+              You got THB <input ng-model="money" type="text" placeholder="999" autofocus> until the end of {{ monthString }}.
+            </p>
+          </div>
+        </div>
 
-        <p>
-          <label for="weekend">Exclude weekends</label>
-          <input type="checkbox" ng-model="weekend" ng-change="recalculate();" id="weekend"><br>
-          You will spend {{ money | currency: "THB " }} in {{ counter }} day(s)
-        </p>
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center content">
+            <p>
+              <label for="weekend">Exclude weekends</label>
+              <input type="checkbox" ng-model="weekend" ng-change="recalculate();" id="weekend"><br>
+              You will spend {{ money | currency: "THB " }} in {{ counter }} day(s)
+            </p>
+          </div>
+        </div>
 
-        <ul class="unstyled">
-          <li ng-repeat="d in dates">
-            <label ng-show="d.show" for="{{ d }}"
-              class="day" ng-class="{weekday: isWeekend(d.date), weekend: !isWeekend(d.date), ignore: d.ignore}">
-              <input type="checkbox" id="{{ d }}" ng-model="d.ignore" ng-change="recalculate();">
-              {{ d.date.format('dddd, MMMM, DD YYYY') }}
-              <span class="money">{{ getAvg(money); }}</span>
-            </label>
-          </li>
-        </ul>
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 center-div content">
+            <ul class="unstyled">
+              <li ng-repeat="d in dates">
+                <label ng-show="d.show" for="{{ d }}"
+                  class="day" ng-class="{weekday: isWeekend(d.date), weekend: !isWeekend(d.date), ignore: d.ignore}">
+                  <input type="checkbox" id="{{ d }}" ng-model="d.ignore" ng-change="recalculate();">
+                  {{ d.date.format('dddd, MMMM, DD YYYY') }}
+                  <span class="money">{{ getAvg(money); }}</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </body>

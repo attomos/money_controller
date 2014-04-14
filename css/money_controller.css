@@ -2,21 +2,25 @@ label {
   cursor: pointer;
 }
 
-body {
-  /* margin: 10px; */
-}
-
-.unstyled {
+ul.unstyled {
   list-style-type: none;
-  display: table-row;
-}
-
-.unstyled li {
+  display: inline-table;
+  min-width: 90%;
   width: 350px;
 }
 
-.container {
-  background: lightyellow;
+.unstyled li {
+  display: inline;
+  text-align: left;
+  width: 300px;
+}
+
+.content {
+  /* background: lightyellow; */
+}
+
+.center-div {
+  text-align: center;
 }
 
 .money::before {
@@ -26,7 +30,7 @@ body {
 .money {
   background: #9CFF8A;
   margin: -5px -5px;
-  padding: 5.5px;
+  padding: 5.1px;
   float: right;
 }
 

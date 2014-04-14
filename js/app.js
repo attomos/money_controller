@@ -2,6 +2,7 @@ function MoneyCtrl($scope) {
   var daysLeft = moment().endOf("month").fromNow(true).split(' ')[0];
   $scope.counter = daysLeft;
   $scope.weekend = true;
+  $scope.monthString = moment().format('MMMM');
 
   var year = moment().year();
   var month = moment().month();

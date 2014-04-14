@@ -1,0 +1,24 @@
+{
+  "name": "money_controller",
+  "version": "0.0.0",
+  "homepage": "https://github.com/attomos/money_controller",
+  "authors": [
+    "Nattaphoom Ch. <attomos@gmail.com>"
+  ],
+  "description": "Money Controller",
+  "main": "js/app.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "angular": "~1.2.16",
+    "moment": "~2.6.0"
+  }
+}
