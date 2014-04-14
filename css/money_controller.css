@@ -3,7 +3,7 @@ label {
 }
 
 body {
-  margin: 10px;
+  /* margin: 10px; */
 }
 
 .unstyled {
@@ -13,6 +13,10 @@ body {
 
 .unstyled li {
   width: 350px;
+}
+
+.container {
+  background: lightyellow;
 }
 
 .money::before {
