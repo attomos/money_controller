@@ -1,5 +1,6 @@
 function MoneyCtrl($scope) {
-  var daysLeft = moment().endOf("month").fromNow(true).split(' ')[0];
+  var endOfMonth = moment().endOf("month");
+  var daysLeft = endOfMonth.diff(moment(), 'day') + 1;
   $scope.counter = daysLeft;
   $scope.weekend = true;
   $scope.monthString = moment().format('MMMM');
