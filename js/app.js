@@ -1,4 +1,9 @@
-function MoneyCtrl($scope) {
+angular.module('MoneyCtrl', [], function($locationProvider) {
+  $locationProvider.html5Mode(true);
+});
+
+function MoneyCtrl($scope, $location) {
+  $scope.money = $location.search()['balance'];
   var endOfMonth = moment().endOf("month");
   var daysLeft = endOfMonth.diff(moment(), 'day') + 1;
   $scope.counter = daysLeft;
