@@ -10,7 +10,6 @@ function MoneyCtrl($scope) {
   var date = moment().date();
 
   $scope.dates = [];
-  $scope.avgMoney = 100;
   for (var i = 0; i < daysLeft; i++) {
     $scope.dates.push({
       date: moment([year, month, parseInt(date, 10) + i]),
