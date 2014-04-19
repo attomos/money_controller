@@ -53,9 +53,5 @@ function MoneyCtrl($scope, $location) {
     }
   };
   $scope.calculate();
-
-  $scope.updateCounter = function(n) {
-    $scope.counter += parseInt(n, 10);
-  };
 }
 
