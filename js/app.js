@@ -34,7 +34,7 @@ function MoneyCtrl($scope, $location) {
     return date.weekday() === 0 || date.weekday() === 6;
   };
 
-  $scope.recalculate = function() {
+  $scope.calculate = function() {
     $scope.counter = 0;
     for (var i = 0; i < $scope.dates.length; i++) {
       if ($scope.weekend) {
@@ -52,7 +52,7 @@ function MoneyCtrl($scope, $location) {
       }
     }
   };
-  $scope.recalculate();
+  $scope.calculate();
 
   $scope.updateCounter = function(n) {
     $scope.counter += parseInt(n, 10);

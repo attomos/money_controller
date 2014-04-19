@@ -26,7 +26,7 @@
           <div class="col-md-6 col-md-offset-3 text-center content">
             <p>
               <label for="weekend">Exclude weekends</label>
-              <input type="checkbox" ng-model="weekend" ng-change="recalculate();" id="weekend"><br>
+              <input type="checkbox" ng-model="weekend" ng-change="calculate();" id="weekend"><br>
               You will spend {{ money | currency: "THB " }} in {{ counter }} day(s)
             </p>
           </div>
@@ -38,7 +38,7 @@
               <li ng-repeat="d in dates">
                 <label ng-show="d.show" for="{{ d }}"
                   class="day" ng-class="{weekday: isWeekend(d.date), weekend: !isWeekend(d.date), ignore: d.ignore}">
-                  <input type="checkbox" id="{{ d }}" ng-model="d.ignore" ng-change="recalculate();">
+                  <input type="checkbox" id="{{ d }}" ng-model="d.ignore" ng-change="calculate();">
                   {{ d.date.format('dddd, MMMM, DD YYYY') }}
                   <span class="money">{{ getAvg(money); }}</span>
                 </label>
