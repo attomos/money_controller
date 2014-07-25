@@ -2,11 +2,20 @@ label {
   cursor: pointer;
 }
 
+.lead {
+  margin-top: 15px;
+}
+
 ul.unstyled {
   list-style-type: none;
+  padding: 0;
   display: inline-table;
   min-width: 90%;
   width: 350px;
+}
+
+.em-text {
+  font-size: 1.3em;
 }
 
 .unstyled li {
@@ -28,24 +37,22 @@ ul.unstyled {
 }
 
 .money {
-  background: #9CFF8A;
-  margin: -5px -5px;
-  padding: 5.1px;
+  color: #111;
   float: right;
 }
 
 .day {
-  margin: 5px 0;
-  padding: 5px;
+  margin: 20px 0;
+  padding: 20px 10px;
   display: block;
 }
 
 .weekday {
-  background: #E3D2E3;
+  background: #BEE2FB;
 }
 
 .weekend {
-  background: #FED6D7;
+  background: #E0F0FF;
 }
 
 .ignore {
