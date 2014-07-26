@@ -40,7 +40,7 @@
                   class="day em-text" ng-class="{weekday: !isWeekend(d.date), weekend: isWeekend(d.date), ignore: d.ignore}">
                   <input type="checkbox" id="{{ d }}" ng-model="d.ignore" ng-change="calculate();">
                   {{ d.date.format('dddd, MMMM DD, YYYY') }}
-                  <span class="money">{{ getAvg(money); }}</span>
+                  <span class="money" ng-hide="d.ignore">{{ getAvg(money); }}</span>
                 </label>
               </li>
             </ul>

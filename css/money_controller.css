@@ -47,12 +47,18 @@ ul.unstyled {
   display: block;
 }
 
+.day:hover {
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
 .weekday {
   background: #BEE2FB;
 }
 
 .weekend {
-  background: #E0F0FF;
+  background: #DCC6DD;
 }
 
 .ignore {
