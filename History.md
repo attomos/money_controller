@@ -1,4 +1,14 @@
 
+0.0.4 / 2014-07-27 
+==================
+
+ * Improved style and hide the .money class span when day is ignored.
+ * Alter some CSS and fixes weekday/weekend logic.
+ * Added .jshintrc
+ * Small changes.
+ * Removed unused method `updateCounter`.
+ * `calculate` is make more sense than `recalculate`.
+
 0.0.3 / 2014-04-19 
 ==================
  * Added $locationProvider with HTML5 mode enabled.
