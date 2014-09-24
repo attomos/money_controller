@@ -17,6 +17,7 @@
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center content">
             <p class="lead">
+            <a href="{{ shareUrl }}">{{ shareUrl }}</a><br>
               You've got THB <input ng-model="money" type="text" placeholder="999" autofocus> until the end of {{ monthString }}.
             </p>
           </div>
@@ -25,7 +26,7 @@
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center content">
             <p>
-              <label class="em-text" for="weekend">Exclude weekends</label>
+              <label class="em-text" for="weekend">Include weekends</label>
               <input type="checkbox" ng-model="weekend" ng-change="calculate();" id="weekend"><br>
               You will spend {{ money | currency: "THB " }} in {{ counter }} day(s)
             </p>
