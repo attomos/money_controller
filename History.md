@@ -1,22 +1,22 @@
 0.0.5 / 2014-09-26
 ==================
- * Add sharable link.
+ * Added sharable link.
 
 
 0.0.4 / 2014-07-27
 ==================
 
- * Improved style and hide the .money class span when day is ignored.
+ * Improved style and hide the `.money` class span when day is ignored.
  * Alter some CSS and fixes weekday/weekend logic.
- * Added .jshintrc
+ * Added `.jshintrc`
  * Small changes.
  * Removed unused method `updateCounter`.
  * `calculate` is make more sense than `recalculate`.
 
 0.0.3 / 2014-04-19
 ==================
- * Added $locationProvider with HTML5 mode enabled.
- * Removed unused var avgMoney.
+ * Added `$locationProvider` with HTML5 mode enabled.
+ * Removed unused var `avgMoney`.
 
 
 0.0.2 / 2014-04-14
@@ -29,8 +29,7 @@
 ==================
 
  *  :heart: added. Let bower handles dependencies.
- * Restructured the directory.
- * How come I wrote 2 DOCTYPEs?
+ * Re-structured project structure.
  * Added changelog, license and README file.
 
 0.0.0 / 2014-04-14

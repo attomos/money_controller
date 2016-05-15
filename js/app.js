@@ -81,4 +81,3 @@ function MoneyCtrl($scope, $location) {
   };
   $scope.calculate();
 }
-
