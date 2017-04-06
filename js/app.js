@@ -25,11 +25,7 @@ function MoneyCtrl($scope, $location) {
   var endOfMonth = moment().endOf("month");
   var daysLeft = endOfMonth.diff(moment(), 'day') + 1;
   $scope.counter = daysLeft;
-  if ($location.search()['weekend'] == 'true') {
-    $scope.weekend = true;
-  } else {
-    $scope.weekend = false;
-  }
+  $scope.weekend = true;
   $scope.shareUrl = getUrl($scope.money, $scope.weekend);
   $scope.monthString = moment().format('MMMM');
 
