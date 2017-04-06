@@ -1,40 +1,31 @@
-var fullUrl = location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
-
-String.prototype.format = function() {
-  var formatted = this;
-  for( var arg in arguments ) {
-    formatted = formatted.replace("{" + arg + "}", arguments[arg]);
-  }
-  return formatted;
-};
+const fullUrl = location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
 
 angular.module('MoneyCtrl', [], function($locationProvider) {
   $locationProvider.html5Mode(true);
 });
 
 function getUrl(money, weekend) {
-  if (fullUrl.indexOf('0.0.0.0') != -1 ||
-      fullUrl.indexOf('localhost') != - 1) {
-    return "{0}/?balance={1}&weekend={2}".format(fullUrl, money, weekend);
+  if (fullUrl.indexOf('0.0.0.0') !== -1 || fullUrl.indexOf('localhost') !== - 1) {
+    return `${fullUrl}/?balance=${money}&weekend=${weekend}`;
   }
-  return "{0}/money_controller/?balance={1}&weekend={2}".format(fullUrl, money, weekend);
+  return `${fullUrl}/money_controller/?balance=${money}&weekend=${weekend}`;
 }
 
 function MoneyCtrl($scope, $location) {
   $scope.money = $location.search()['balance'] || 0;
-  var endOfMonth = moment().endOf("month");
-  var daysLeft = endOfMonth.diff(moment(), 'day') + 1;
+  const endOfMonth = moment().endOf("month");
+  const daysLeft = endOfMonth.diff(moment(), 'day') + 1;
   $scope.counter = daysLeft;
   $scope.weekend = true;
   $scope.shareUrl = getUrl($scope.money, $scope.weekend);
   $scope.monthString = moment().format('MMMM');
 
-  var year = moment().year();
-  var month = moment().month();
-  var date = moment().date();
+  const year = moment().year();
+  const month = moment().month();
+  const date = moment().date();
 
   $scope.dates = [];
-  for (var i = 0; i < daysLeft; i++) {
+  for (let i = 0; i < daysLeft; i++) {
     $scope.dates.push({
       date: moment([year, month, parseInt(date, 10) + i]),
       show: true,
@@ -59,7 +50,7 @@ function MoneyCtrl($scope, $location) {
     $scope.shareUrl = getUrl($scope.money, $scope.weekend);
     // window.location.href = getUrl($scope.money, $scope.weekend);
     $scope.counter = 0;
-    for (var i = 0; i < $scope.dates.length; i++) {
+    for (let i = 0; i < $scope.dates.length; i++) {
       if (!$scope.weekend) {
         if (!$scope.isWeekend($scope.dates[i].date)) {
           $scope.dates[i].show = true;
