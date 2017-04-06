@@ -12,7 +12,7 @@ function getUrl(money, weekend) {
 }
 
 function MoneyCtrl($scope, $location) {
-  $scope.money = $location.search()['balance'] || 0;
+  $scope.money = $location.search()['balance'];
   const endOfMonth = moment().endOf('month');
   const daysLeft = endOfMonth.diff(moment(), 'day') + 1;
   $scope.counter = daysLeft;
